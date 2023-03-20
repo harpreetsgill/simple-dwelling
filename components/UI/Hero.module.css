@@ -1,11 +1,11 @@
 .hero {
   max-width: 545px;
   margin: 120px 0;
-  opacity: 0;
-  animation-duration: 1s;
+  opacity: 1;
+  /* animation-duration: 1s;
   animation-name: fade;
   animation-delay: 0.2s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
 .hero h1 {
@@ -24,5 +24,11 @@
     position: relative;
     top: 0px;
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 89px 0;
   }
 }

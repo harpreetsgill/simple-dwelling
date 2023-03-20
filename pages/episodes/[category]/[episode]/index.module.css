@@ -38,7 +38,7 @@
   max-width: 30%;
 }
 
-.content > .row:first-child > .column:first-child > p {
+.content > .row:first-child > .column:first-child > p:first-child {
   margin-top: 48px;
 }
 
@@ -75,4 +75,37 @@
 
 .content iframe {
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 89px;
+  }
+  .header h1 {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .header time {
+    margin-bottom: 20px;
+  }
+  .content .video,
+  .content .video img {
+    height: 255px;
+  }
+  .content .row {
+    display: block;
+  }
+  .content .row .column {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .content .row .column .image {
+    height: 480px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+  .content > .image {
+    height: 255px;
+  }
 }

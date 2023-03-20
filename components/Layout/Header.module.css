@@ -36,3 +36,12 @@
 .advertise {
   margin-right: 19px;
 }
+
+@media (max-width: 768px) {
+  .logo {
+    grid-column: 1 / 5;
+  }
+  .nav {
+    display: none;
+  }
+}

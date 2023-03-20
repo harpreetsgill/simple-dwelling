@@ -9,3 +9,10 @@
 .icon {
   grid-column: 5 / 11;
 }
+
+@media (max-width: 768px) {
+  .thumbnail,
+  .icon {
+    grid-column: 1 / 6;
+  }
+}

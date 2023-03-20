@@ -3,6 +3,11 @@
   margin-bottom: 154px;
 }
 
+.thumbnail:last-child,
+.icon:last-child {
+  margin-bottom: 0;
+}
+
 .thumbnail .image {
   height: 28vw;
   width: calc(61% - 11px);
@@ -86,4 +91,40 @@
 
 .icon .text p {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .thumbnail {
+    flex-direction: column;
+    margin-bottom: 68px;
+  }
+  .thumbnail .image {
+    width: 60%;
+    height: calc(60vw - 44px);
+  }
+  .thumbnail .text {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 22px;
+    position: relative;
+  }
+
+  .thumbnail .text time {
+    position: absolute;
+    left: calc(60% + 22px);
+    top: -38px;
+  }
+  .text p {
+    display: none;
+  }
+  .icon .image {
+    width: calc(20% + 22px);
+  }
+  .icon .text h2 {
+    width: 100%;
+  }
+  .icon .text time {
+    display: none;
+  }
 }

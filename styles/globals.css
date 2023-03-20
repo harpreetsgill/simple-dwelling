@@ -165,3 +165,31 @@ u {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .page-text {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .page-text .text-col-1,
+  .page-text .text-col-2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .form-filter,
+  .view-filter {
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+  .form-filter .radio-button,
+  .form-filter .radio-button {
+    margin-bottom: 5px;
+  }
+  .radio-button input[type="radio"]:checked {
+    background-color: #ededed !important;
+  }
+}
