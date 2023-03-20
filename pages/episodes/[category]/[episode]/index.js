@@ -305,7 +305,7 @@ export async function getStaticPaths() {
     "Category",
     "is_not_empty",
     "Publish Date",
-    1
+    100
   );
   const episodesPermalinks = databasePages.map((page) => {
     return {
