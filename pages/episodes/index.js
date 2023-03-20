@@ -87,7 +87,8 @@ export async function getStaticProps() {
     databaseId,
     "Category",
     "is_not_empty",
-    "Publish Date"
+    "Publish Date",
+    100
   );
   const episodes = databasePages.map((page) => {
     return {

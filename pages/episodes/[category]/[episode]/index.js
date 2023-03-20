@@ -19,7 +19,9 @@ const renderBlock = (block) => {
         <div className={styles.row}>
           {block.children
             ? block.children.map((child) => (
-                <Fragment key={Math.floor(Math.random() * 10000)}>{renderBlock(child)}</Fragment>
+                <Fragment key={Math.floor(Math.random() * 10000)}>
+                  {renderBlock(child)}
+                </Fragment>
               ))
             : ""}
         </div>
@@ -32,7 +34,9 @@ const renderBlock = (block) => {
       return (
         <div className={classes}>
           {block.children.map((child) => (
-            <Fragment key={Math.floor(Math.random() * 10000)}>{renderBlock(child)}</Fragment>
+            <Fragment key={Math.floor(Math.random() * 10000)}>
+              {renderBlock(child)}
+            </Fragment>
           ))}
         </div>
       );
@@ -68,7 +72,11 @@ const renderBlock = (block) => {
                 </Fragment>
               );
             }
-            return <Fragment key={Math.floor(Math.random() * 10000)}>{textOutput}</Fragment>;
+            return (
+              <Fragment key={Math.floor(Math.random() * 10000)}>
+                {textOutput}
+              </Fragment>
+            );
           })}
         </h1>
       );
@@ -104,7 +112,11 @@ const renderBlock = (block) => {
                 </Fragment>
               );
             }
-            return <Fragment key={Math.floor(Math.random() * 10000)}>{textOutput}</Fragment>;
+            return (
+              <Fragment key={Math.floor(Math.random() * 10000)}>
+                {textOutput}
+              </Fragment>
+            );
           })}
         </h2>
       );
@@ -140,7 +152,11 @@ const renderBlock = (block) => {
                 </Fragment>
               );
             }
-            return <Fragment key={Math.floor(Math.random() * 10000)}>{textOutput}</Fragment>;
+            return (
+              <Fragment key={Math.floor(Math.random() * 10000)}>
+                {textOutput}
+              </Fragment>
+            );
           })}
         </h3>
       );
@@ -176,7 +192,11 @@ const renderBlock = (block) => {
                 </Fragment>
               );
             }
-            return <Fragment key={Math.floor(Math.random() * 10000)}>{textOutput}</Fragment>;
+            return (
+              <Fragment key={Math.floor(Math.random() * 10000)}>
+                {textOutput}
+              </Fragment>
+            );
           })}
         </p>
       );
@@ -284,7 +304,8 @@ export async function getStaticPaths() {
     databaseId,
     "Category",
     "is_not_empty",
-    "Publish Date"
+    "Publish Date",
+    1
   );
   const episodesPermalinks = databasePages.map((page) => {
     return {
