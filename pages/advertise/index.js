@@ -1,8 +1,16 @@
+import Head from "next/head";
 import Hero from "@/components/UI/Hero";
 
 export default function AdvertisePage() {
   return (
     <>
+      <Head>
+        <title>Advertise</title>
+        <meta
+          name="description"
+          content="Want your brand, product or service in front of architects, designers, minimalists, and people who love design and homes? Consider partnering with The Design Emotive, a publication dedicated to producing original video content about simplicity, minimalist architecture and house design."
+        />
+      </Head>
       <Hero>
         Partnering with Simple Dwelling gives your brand the opportunity to
         reach a design-minded audience through original, native video content.

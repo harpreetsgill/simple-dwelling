@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Hero from "@/components/UI/Hero";
 import LatestEpisodes from "@/components/UI/LatestEpisodes";
 import { queryDatabase } from "@/lib/notion";
@@ -7,6 +8,13 @@ const databaseId = process.env.EPISODES_DB_ID;
 export default function Home({ episodes }) {
   return (
     <>
+      <Head>
+        <title>Simple Dwelling</title>
+        <meta
+          name="description"
+          content="Simple Dwelling is devoted to simple and sustainable design and living."
+        />
+      </Head>
       <Hero>
         Simple Dwelling explores sustainability and simplicity in homes, design
         and living.

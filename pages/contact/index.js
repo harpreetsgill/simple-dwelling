@@ -1,20 +1,29 @@
+import Head from "next/head";
 import Hero from "@/components/UI/Hero";
 import Link from "next/link";
 
 export default function ContactPage() {
   return (
     <>
+      <Head>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="If you're an Australian architect and interested in collaborating on a video about your project, or you wish to submit a completed project for publication, get in touch."
+        />
+      </Head>
       <Hero>Get in Touch</Hero>
       <div className="page-text">
         <div className="text-col-1">
           <p>
             If you’re interested in brand partnership and advertising, visit the{" "}
-            <Link href="/advertise">advertising page</Link> for more information.
+            <Link href="/advertise">advertising page</Link> for more
+            information.
           </p>
           <p>
             If you have a home that I can film for an episode, visit the{" "}
-            <Link href="/submissions">episode submission page</Link> for guidelines
-            and to fill out the form.
+            <Link href="/submissions">episode submission page</Link> for
+            guidelines and to fill out the form.
           </p>
           <p>
             I am no longer accepting submissions for the Instagram account.

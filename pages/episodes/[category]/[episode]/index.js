@@ -257,8 +257,11 @@ export default function EpisodePage({ pageProperties, pageContentBlock }) {
 export async function getStaticProps(context) {
   const slug = context.params.episode;
 
-  const pageContentBlock = await getPageContent(databaseId, slug);
-  const pageId = pageContentBlock[0].parent.page_id;
+  const { id: pageId, blocks: pageContentBlock } = await getPageContent(
+    databaseId,
+    slug
+  );
+
   const pageBlock = await retrievePage(pageId);
 
   const pageProperties = {

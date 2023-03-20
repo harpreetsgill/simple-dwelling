@@ -1,9 +1,16 @@
+import Head from "next/head";
 import Hero from "@/components/UI/Hero";
-import Link from "next/link";
 
 export default function SubmissionPage() {
   return (
     <>
+      <Head>
+        <title>Submissions</title>
+        <meta
+          name="description"
+          content="If you are an architect or designer with a completed, or soon to be completed, project that aligns with Simple Dwelling, I want to hear from you."
+        />
+      </Head>
       <Hero>Simple and Sustainable</Hero>
       <div className="page-text">
         <div className="text-col-1">

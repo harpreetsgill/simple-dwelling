@@ -1,13 +1,20 @@
+import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "./EpisodeThumbnail.module.css";
 
 export default function EpisodeThumbnail(props) {
+  const router = useRouter();
+
   const image = props.image;
   const title = props.title;
   const date = props.date;
   const desc = props.desc;
   const categorySlug = props.category.slug;
-  const episodeLink = `episodes/${categorySlug}/${props.permalink}`;
+  const episodeLink =
+    router.pathname === "/" || router.pathname === "/episodes"
+      ? `episodes/${categorySlug}/${props.permalink}`
+      : `${categorySlug}/${props.permalink}`;
 
   const classes = props.view
     ? `${props.className} ${styles.thumbnail}`
@@ -39,11 +46,11 @@ export default function EpisodeThumbnail(props) {
   return (
     <div className={classes}>
       <div className={styles.image}>
-        <a href={episodeLink}>{displayImage}</a>
+        <Link href={episodeLink}>{displayImage}</Link>
       </div>
       <div className={styles.text}>
         <h2>
-          <a href={episodeLink}>{title}</a>
+          <Link href={episodeLink}>{title}</Link>
         </h2>
         <time dateTime={date}>{date}</time>
         <p>{desc}</p>

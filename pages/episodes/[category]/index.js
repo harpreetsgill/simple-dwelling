@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import LatestEpisodes from "@/components/UI/LatestEpisodes";
+import Head from "next/head";
 import { queryDatabase, retrieveDatabase } from "@/lib/notion";
-import PlaceholderImage from "@/public/placeholder.png";
 import { toTitleCase } from "@/lib/functions";
+import LatestEpisodes from "@/components/UI/LatestEpisodes";
+import PlaceholderImage from "@/public/placeholder.png";
 
 const databaseId = process.env.EPISODES_DB_ID;
 
-export default function CategoryPage({ episodes, categories }) {
+export default function CategoryPage({
+  currentCategoryName,
+  episodes,
+  categories,
+}) {
   const [currentView, setCurrentView] = useState(true);
   const router = useRouter();
   const currentPageSlug = router.query.category;
@@ -26,6 +31,13 @@ export default function CategoryPage({ episodes, categories }) {
 
   return (
     <>
+      <Head>
+        <title>Episodes | {currentCategoryName}</title>
+        <meta
+          name="description"
+          content="Simple Dwelling is devoted to simple and sustainable design and living."
+        />
+      </Head>
       <div className="sort-view">
         <form onChange={categoryHandler} className="form-filter">
           <div className="radio-button">
@@ -142,6 +154,7 @@ export async function getStaticProps(context) {
     props: {
       episodes,
       categories,
+      currentCategoryName,
     },
   };
 }

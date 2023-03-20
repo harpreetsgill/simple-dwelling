@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import LatestEpisodes from "@/components/UI/LatestEpisodes";
+import Head from "next/head";
 import { queryDatabase, retrieveDatabase } from "@/lib/notion";
+import LatestEpisodes from "@/components/UI/LatestEpisodes";
 import PlaceholderImage from "@/public/placeholder.png";
 
 const databaseId = process.env.EPISODES_DB_ID;
@@ -20,6 +21,13 @@ export default function EpisodesPage({ episodes, categories }) {
 
   return (
     <>
+      <Head>
+        <title>Episodes</title>
+        <meta
+          name="description"
+          content="Simple Dwelling is devoted to simple and sustainable design and living."
+        />
+      </Head>
       <div className="sort-view">
         <form onChange={categoryHandler} className="form-filter">
           <div className="radio-button">
