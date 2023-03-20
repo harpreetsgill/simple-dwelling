@@ -1,0 +1,15 @@
+.error {
+  margin: 120px 0;
+}
+
+.error h1 {
+  grid-column: 3 / 5;
+  text-align: right;
+}
+
+.error h2 {
+  line-height: 1;
+  font-size: 1.2em;
+  grid-column: 5 / 11;
+  align-self: center;
+}

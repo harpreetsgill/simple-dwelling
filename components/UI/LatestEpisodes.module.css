@@ -1,0 +1,11 @@
+.latest-episodes {
+  margin-bottom: 50px;
+}
+
+.thumbnail {
+  grid-column: 5 / 10;
+}
+
+.icon {
+  grid-column: 5 / 11;
+}

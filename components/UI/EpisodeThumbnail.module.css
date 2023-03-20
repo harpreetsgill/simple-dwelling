@@ -1,0 +1,89 @@
+.thumbnail {
+  display: flex;
+  margin-bottom: 154px;
+}
+
+.thumbnail .image {
+  height: 28vw;
+  width: calc(61% - 11px);
+  margin-right: 11px;
+  background-color: grey;
+}
+
+.thumbnail .image a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.thumbnail .image a img {
+  object-fit: cover;
+}
+
+.thumbnail .text {
+  width: calc(40% - 11px);
+  margin-left: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thumbnail .text h2 {
+  font-size: 1em;
+  height: 60%;
+}
+
+.thumbnail .text h2 a {
+  text-decoration: underline;
+}
+
+.thumbnail .text time {
+  margin-bottom: 22px;
+}
+
+.thumbnail .text p {
+  align-self: baseline;
+  margin-bottom: 0px;
+}
+
+.icon {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.icon .image {
+  position: relative;
+  width: 10%;
+}
+
+.icon .image a {
+  display: inline-block;
+}
+
+.icon .image img {
+  object-fit: cover;
+}
+
+.icon .text {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon .text h2 {
+  display: inline;
+  font-size: 1em;
+  margin: 0;
+  width: 60%;
+}
+
+.icon .text time {
+  width: 30%;
+}
+
+.icon .text p {
+  display: none;
+}

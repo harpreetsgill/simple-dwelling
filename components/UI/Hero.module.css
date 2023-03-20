@@ -1,0 +1,28 @@
+.hero {
+  max-width: 545px;
+  margin: 120px 0;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fade;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+@keyframes fade {
+  from {
+    position: relative;
+    top: 30px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
