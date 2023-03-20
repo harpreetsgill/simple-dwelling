@@ -299,6 +299,7 @@ export async function getStaticProps(context) {
       pageProperties,
       pageContentBlock,
     },
+    revalidate: 1,
   };
 }
 

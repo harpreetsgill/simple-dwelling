@@ -140,5 +140,6 @@ export async function getStaticProps() {
       episodes,
       categories,
     },
+    revalidate: 1
   };
 }
