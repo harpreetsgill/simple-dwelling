@@ -1,3 +1,3 @@
 ## Simple Dwelling
 
-website for a website that showcases minimal architecture
+website for Simple Dwelling, built using React.js, Next.js and Notion
