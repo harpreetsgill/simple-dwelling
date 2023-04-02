@@ -156,7 +156,6 @@ export async function getStaticProps(context) {
       categories,
       currentCategoryName,
     },
-    revalidate: 1,
   };
 }
 
